@@ -1,11 +1,10 @@
 FROM node:slim
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends nginx && \
+    apt-get install -y --no-install-recommends nginx git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     npm install -g yarn && \
-    npm install -g bower && \
     npm cache clean
 
 COPY docker/nginx.conf /etc/nginx/nginx.conf
@@ -25,13 +24,13 @@ USER tlaw
 RUN yarn config set ignore-optional true -g && \
     yarn install --pure-lockfile
 
-# RUN yarn install --pure-lockfile && \
+#RUN yarn install --pure-lockfile && \
     # $(yarn bin)/bower install -F
 
 USER root
 
-# RUN npm run prod
+RUN npm run prod
 
 EXPOSE 80
 
-CMD nginx && npm run prod
+CMD ["nginx", "-g", "daemon off;"]
