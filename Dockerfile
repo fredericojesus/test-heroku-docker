@@ -22,10 +22,8 @@ RUN adduser tlaw && \
 USER tlaw
 
 RUN yarn config set ignore-optional true -g && \
-    yarn install --pure-lockfile
-
-#RUN yarn install --pure-lockfile && \
-    # $(yarn bin)/bower install -F
+    yarn install --pure-lockfile && \
+    $(yarn bin)/bower install -F
 
 USER root
 
