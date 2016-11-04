@@ -11,7 +11,8 @@
 
 global.isProd = false;
 
-var gulp = require('./gulp');
+require('./gulp');
+var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var $ = require('gulp-load-plugins')({lazy: true});
 
