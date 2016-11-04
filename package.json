@@ -11,7 +11,7 @@
   "scripts": {
     "init": "yarn",
     "install": "bower install",
-    "prod": "gulp build-dist"
+    "dist": "gulp serve-dist"
   },
   "devDependencies": {
     "browser-sync": "~2.8.2",
