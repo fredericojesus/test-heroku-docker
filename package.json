@@ -10,6 +10,7 @@
   "license": "MIT",
   "scripts": {
     "init": "yarn",
+    "install": "bower install",
     "prod": "gulp build-dist"
   },
   "devDependencies": {
