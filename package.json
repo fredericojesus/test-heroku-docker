@@ -14,10 +14,10 @@
   },
   "devDependencies": {
     "browser-sync": "~2.8.2",
-    "connect-modrewrite": "^0.9.0",
-    "gulp-task-listing": "^1.0.1"
+    "connect-modrewrite": "^0.9.0"
   },
   "dependencies": {
+    "gulp-task-listing": "^1.0.1",
     "del": "~2.0.0",
     "gulp": "~3.9.0",
     "gulp-angular-templatecache": "~1.7.0",
